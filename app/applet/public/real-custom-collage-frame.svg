@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 540" width="100%" height="100%">
+  <defs>
+    <!-- Frame Drop Shadow -->
+    <filter id="shadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+
+    <!-- Glass Reflection Gradient -->
+    <linearGradient id="glassGlare" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.32"/>
+      <stop offset="30%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.18"/>
+    </linearGradient>
+
+    <!-- Matte Black Frame Moulding Gradients -->
+    <linearGradient id="frameBevelTop" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a2a2a"/>
+      <stop offset="100%" stop-color="#141414"/>
+    </linearGradient>
+    <linearGradient id="frameBevelSide" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#222222"/>
+      <stop offset="100%" stop-color="#121212"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Hand Silhouette holding the frame (Left) -->
+  <g id="hand-silhouette">
+    <!-- Hand base -->
+    <path d="M 12 210 C 8 200 2 220 2 270 C 2 330 10 380 30 400 L 48 380 L 48 220 Z" fill="#cf9b7c"/>
+    <path d="M 18 220 C 14 210 8 225 8 265 C 8 320 15 370 32 390 L 46 375 L 46 228 Z" fill="#e8bc9e"/>
+    <!-- Thumb holding outer frame edge -->
+    <ellipse cx="44" cy="245" rx="14" ry="32" fill="#edd0be" transform="rotate(-6 44 245)"/>
+    <path d="M 38 220 C 44 220 52 230 52 255 C 52 275 42 280 36 270 Z" fill="#ddb397"/>
+    <ellipse cx="43" cy="235" rx="4" ry="7" fill="#ffffff" opacity="0.3"/>
+  </g>
+
+  <!-- Main Picture Frame with Shadow -->
+  <rect x="42" y="30" width="320" height="470" rx="6" ry="6" fill="#141414" filter="url(#shadow)"/>
+  
+  <!-- Outer Frame Bevel Highlights -->
+  <rect x="42" y="30" width="320" height="470" rx="6" ry="6" fill="none" stroke="#2d2d2d" stroke-width="2"/>
+  
+  <!-- Mitred Corner Seams -->
+  <line x1="42" y1="30" x2="72" y2="60" stroke="#0a0a0a" stroke-width="1.5"/>
+  <line x1="362" y1="30" x2="332" y2="60" stroke="#0a0a0a" stroke-width="1.5"/>
+  <line x1="42" y1="500" x2="72" y2="470" stroke="#0a0a0a" stroke-width="1.5"/>
+  <line x1="362" y1="500" x2="332" y2="470" stroke="#0a0a0a" stroke-width="1.5"/>
+
+  <!-- Inner Recessed Glass Opening -->
+  <rect x="70" y="58" width="264" height="414" fill="#000" stroke="#222" stroke-width="2"/>
+
+  <!-- Photo Collage Tiles Grid (3x3 Layout matching original photo) -->
+  <g id="photo-collage" clip-path="url(#innerClip)">
+    <clipPath id="innerClip">
+      <rect x="72" y="60" width="260" height="410" rx="1"/>
+    </clipPath>
+
+    <!-- Base Canvas -->
+    <rect x="72" y="60" width="260" height="410" fill="#f8f9fa"/>
+
+    <!-- Row 1: Top 3 Photos -->
+    <!-- Tile 1: Top-Left (Green & Violet Saree) -->
+    <rect x="74" y="62" width="84" height="130" fill="#1f4e38"/>
+    <!-- Simulated friends posing -->
+    <ellipse cx="98" cy="98" rx="9" ry="11" fill="#f3cfbe"/>
+    <path d="M 88 112 Q 98 108 108 112 L 109 192 L 87 192 Z" fill="#2d6a4f"/>
+    <ellipse cx="132" cy="102" rx="9" ry="11" fill="#edd0be"/>
+    <path d="M 122 116 Q 132 112 142 116 L 145 192 L 120 192 Z" fill="#6a1b9a"/>
+    <path d="M 122 120 Q 132 128 142 120" stroke="#fbc02d" stroke-width="2" fill="none"/>
+
+    <!-- Tile 2: Top-Center (Festive Saree & Gold Jewellery) -->
+    <rect x="160" y="62" width="84" height="130" fill="#4a148c"/>
+    <ellipse cx="188" cy="112" rx="9" ry="11" fill="#f4cfb8"/>
+    <path d="M 178 126 Q 188 122 198 126 L 202 192 L 174 192 Z" fill="#00796b"/>
+    <ellipse cx="218" cy="108" rx="11" ry="13" fill="#f1cfbe"/>
+    <!-- Gold necklace -->
+    <path d="M 210 120 Q 218 128 226 120" stroke="#fbc02d" stroke-width="2.5" fill="none"/>
+    <circle cx="218" cy="100" r="1.5" fill="#fbc02d"/>
+    <path d="M 206 124 Q 218 120 230 124 L 236 192 L 200 192 Z" fill="#7b1fa2"/>
+
+    <!-- Tile 3: Top-Right (Lilac & Black Dress) -->
+    <rect x="246" y="62" width="84" height="130" fill="#9fa8da"/>
+    <ellipse cx="272" cy="108" rx="8" ry="10" fill="#eed0be"/>
+    <path d="M 264 120 Q 272 116 280 120 L 282 192 L 262 192 Z" fill="#b39ddb"/>
+    <ellipse cx="304" cy="112" rx="9" ry="11" fill="#eed0be"/>
+    <path d="M 294 126 Q 304 122 314 126 L 318 192 L 290 192 Z" fill="#212121"/>
+
+    <!-- Row 2: Middle 3 Photos -->
+    <!-- Tile 4: Middle-Left (Lavender saree & Dark gown) -->
+    <rect x="74" y="194" width="84" height="130" fill="#d1c4e9"/>
+    <ellipse cx="98" cy="235" rx="10" ry="12" fill="#eed0be"/>
+    <path d="M 87 250 Q 98 246 109 250 L 111 324 L 85 324 Z" fill="#b39ddb"/>
+    <ellipse cx="134" cy="238" rx="10" ry="12" fill="#eed0be"/>
+    <path d="M 123 252 Q 134 248 145 252 L 148 324 L 120 324 Z" fill="#1e1e1e"/>
+
+    <!-- Tile 5: Middle-Center (Warm smiles together) -->
+    <rect x="160" y="194" width="84" height="130" fill="#ffe082"/>
+    <ellipse cx="188" cy="242" rx="9" ry="11" fill="#f4cfb8"/>
+    <path d="M 178 255 Q 188 251 198 255 L 200 324 L 176 324 Z" fill="#ff7043"/>
+    <ellipse cx="218" cy="245" rx="9" ry="11" fill="#f4cfb8"/>
+    <path d="M 208 258 Q 218 254 228 258 L 230 324 L 206 324 Z" fill="#42a5f5"/>
+
+    <!-- Tile 6: Middle-Right (Pink floral & Lime green blazer) -->
+    <rect x="246" y="194" width="84" height="130" fill="#f48fb1"/>
+    <ellipse cx="272" cy="240" rx="9" ry="11" fill="#eed0be"/>
+    <path d="M 262 254 Q 272 250 282 254 L 285 324 L 260 324 Z" fill="#e91e63"/>
+    <ellipse cx="304" cy="244" rx="9" ry="11" fill="#eed0be"/>
+    <path d="M 294 258 Q 304 254 314 258 L 316 324 L 292 324 Z" fill="#9ccc65"/>
+
+    <!-- Row 3: Bottom 3 Photos -->
+    <!-- Tile 7: Bottom-Left (Purple kurti & dark attire) -->
+    <rect x="74" y="326" width="84" height="142" fill="#b39ddb"/>
+    <ellipse cx="98" cy="370" rx="9" ry="11" fill="#eed0be"/>
+    <path d="M 88 384 Q 98 380 108 384 L 110 468 L 86 468 Z" fill="#7e57c2"/>
+    <ellipse cx="134" cy="374" rx="9" ry="11" fill="#eed0be"/>
+    <path d="M 124 388 Q 134 384 144 388 L 146 468 L 122 468 Z" fill="#212121"/>
+
+    <!-- Tile 8: Bottom-Center -->
+    <rect x="160" y="326" width="84" height="142" fill="#3949ab"/>
+
+    <!-- Tile 9: Bottom-Right (Festive violet saree) -->
+    <rect x="246" y="326" width="84" height="142" fill="#1e88e5"/>
+    <ellipse cx="272" cy="370" rx="8" ry="10" fill="#eed0be"/>
+    <path d="M 263 382 Q 272 378 281 382 L 283 468 L 261 468 Z" fill="#0d47a1"/>
+    <ellipse cx="304" cy="374" rx="10" ry="12" fill="#eed0be"/>
+    <path d="M 293 388 Q 304 384 315 388 L 318 468 L 290 468 Z" fill="#6a1b9a"/>
+    <path d="M 296 392 Q 304 398 312 392" stroke="#fbc02d" stroke-width="2" fill="none"/>
+
+    <!-- Prominent Centerpiece Cutout (Two friends in maroon & gold shimmer sarees) -->
+    <g id="centerpiece-cutout" filter="drop-shadow(0 6px 10px rgba(0,0,0,0.6))">
+      <!-- Friend 1: Wine Maroon Saree -->
+      <path d="M 166 310 C 166 280 188 280 188 310 L 194 450 L 158 450 Z" fill="#6a0026"/>
+      <ellipse cx="178" cy="290" rx="10" ry="12" fill="#f4cfb8"/>
+      <circle cx="178" cy="285" r="1.5" fill="#fbc02d"/>
+      <path d="M 170 304 Q 178 312 186 304" stroke="#fbc02d" stroke-width="2" fill="none"/>
+      <!-- Gold saree border highlights -->
+      <path d="M 164 330 L 190 350 L 192 450" stroke="#fbc02d" stroke-width="2" fill="none"/>
+
+      <!-- Friend 2: Golden Shimmer Saree -->
+      <path d="M 208 312 C 208 282 230 282 230 312 L 236 450 L 202 450 Z" fill="#d4af37"/>
+      <ellipse cx="218" cy="292" rx="10" ry="12" fill="#f4cfb8"/>
+      <circle cx="218" cy="287" r="1.5" fill="#fbc02d"/>
+      <path d="M 210 306 Q 218 314 226 306" stroke="#fff8e1" stroke-width="2" fill="none"/>
+      <path d="M 206 332 L 232 352 L 234 450" stroke="#fff8e1" stroke-width="2" fill="none"/>
+    </g>
+
+    <!-- Bottom Watermark Strip -->
+    <rect x="74" y="452" width="256" height="18" fill="#000000" opacity="0.65"/>
+    <text x="82" y="465" font-family="monospace, sans-serif" font-size="8" fill="#ffffff" font-weight="bold">realme · SBk Enterprise Customer Order ❤️</text>
+
+    <!-- Top Diagonal Glass Reflection Glare -->
+    <polygon points="72,60 220,60 72,210" fill="url(#glassGlare)" opacity="0.6"/>
+    <polygon points="120,60 332,60 332,270 72,470" fill="url(#glassGlare)" opacity="0.25"/>
+  </g>
+
+  <!-- Frame Inner Shadow Rim on Glass -->
+  <rect x="70" y="58" width="264" height="414" fill="none" stroke="#000000" stroke-width="3" opacity="0.4"/>
+</svg>
